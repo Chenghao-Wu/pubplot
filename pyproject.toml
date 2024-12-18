@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pubplot"
+version = "0.1.0"
+dependencies = [
+  "matplotlib",
+  "numpy",
+  "palettable",
+]
+requires-python = ">=3.8"
+authors = [
+  {name = "Zhenghao Wu", email = "zhenghao.wu@xjtlu.edu.cn"},
+]
+maintainers = [
+  {name = "Zhenghao Wu", email = "zhenghao.wu@xjtlu.edu.cn"}
+]
+description = "A plotting library for scientific data visualization."
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+keywords = ["plotting", "visualization", "data", "matplotlib", "numpy"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+
+[project.urls]
+Homepage = "https://example.com"
+Documentation = "https://readthedocs.org"
+Repository = "https://github.com/me/pubplot.git"
+"Bug Tracker" = "https://github.com/me/pubplot/issues"
+Changelog = "https://github.com/me/pubplot/blob/master/CHANGELOG.md"
+
+[project.scripts]
+pubplot-cli = "pubplot:main_cli"
+
+[project.gui-scripts]
+pubplot-gui = "pubplot:main_gui"
+
+[project.entry-points."pubplot.magical"]
+visualize = "pubplot:main_visualize"
