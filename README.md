@@ -22,6 +22,10 @@ cd pubplot
 pip install .
 ```
 
+## Example:
+
+Please find an example on [Colab](https://colab.research.google.com/drive/1O-Ui8XFysaTrif0kZ42sIcuxb18jOrtE?usp=sharing)
+
 ## Usage
 
 ### Basic Example
