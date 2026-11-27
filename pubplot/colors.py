@@ -63,7 +63,8 @@ tableau_10[3], tableau_10[4] = tableau_10[4], tableau_10[3]
 tableau_20 = Tableau_20.mpl_colors
 
 #default_color_cycler = cycler('color', cubehelix.cubehelix3_16_r.mpl_colors)
-default_color_cycler = cycler('color', brewer_set1)
+# Same palette and order as linestyle_generator (see linestyle.py)
+default_color_cycler = cycler('color', tableau_10)
 
 
 def rainbow(number_colors=10):
