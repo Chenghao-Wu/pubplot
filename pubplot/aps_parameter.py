@@ -3,22 +3,9 @@ import matplotlib.pyplot as plt
 import logging 
 logging.getLogger('matplotlib.font_manager').disabled = True
 
-from cycler import cycler
-from palettable.colorbrewer.qualitative import Set1_9
-from palettable.tableau import Tableau_10, Tableau_20
-from palettable import cubehelix
-
-almost_black = '#262626'
-
-brewer_set1 = Set1_9.mpl_colors
-# Remove the sixth color (yellow) which is too bright
-brewer_set1.pop(5)
-# Swap the red and blue to let blue come first
-brewer_set1[0], brewer_set1[1] = brewer_set1[1], brewer_set1[0]
-# Add a decent black color to this list
-brewer_set1.append(almost_black)
-
-default_color_cycler = cycler('color', brewer_set1)
+# Use the same palette as linestyle_generator, so plain ax.plot calls and
+# **next(linestyles) give the same colours.
+from .colors import almost_black, brewer_set1, tableau_10, default_color_cycler
 
 width_single_column = 3.375
 width_double_column = 6.75

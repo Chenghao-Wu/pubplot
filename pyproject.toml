@@ -27,17 +27,6 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://example.com"
-Documentation = "https://readthedocs.org"
-Repository = "https://github.com/me/pubplot.git"
-"Bug Tracker" = "https://github.com/me/pubplot/issues"
-Changelog = "https://github.com/me/pubplot/blob/master/CHANGELOG.md"
-
-[project.scripts]
-pubplot-cli = "pubplot:main_cli"
-
-[project.gui-scripts]
-pubplot-gui = "pubplot:main_gui"
-
-[project.entry-points."pubplot.magical"]
-visualize = "pubplot:main_visualize"
+Homepage = "https://github.com/Chenghao-Wu/pubplot"
+Repository = "https://github.com/Chenghao-Wu/pubplot.git"
+"Bug Tracker" = "https://github.com/Chenghao-Wu/pubplot/issues"

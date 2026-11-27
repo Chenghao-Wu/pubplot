@@ -127,6 +127,30 @@ ax2.legend()
 fig.tight_layout()
 ```
 
+### Markers on the Axes Frame
+
+The APS parameters use zero margins and round-number axis limits, so a data point that sits
+exactly on a limit (e.g. at `x = 1.0`) is cut in half by the frame. After plotting, and after
+any `set_xlim`/`set_ylim`, call one of:
+
+```python
+import pubplot
+
+pubplot.unclip(ax)    # keep the limits; draw edge markers in full over the frame
+pubplot.pad(ax, 0.02) # or move the limits outward by 2% of the span on each side
+```
+
+`unclip` only affects lines and collections whose data lie entirely inside the axis limits,
+so curves that run past the limits stay clipped. `pad` works in log space on log axes, but the
+frame no longer sits on round tick values.
+
+### Colors
+
+`import pubplot.aps_parameter` sets the default color cycle to the same palette and order as
+`linestyle_generator` (`pubplot.colors.tableau_10`), so plain `ax.plot(...)` calls and
+`**next(linestyles)` give the same colors. They are still separate cycles, so on one axis use
+one or the other, not both.
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
